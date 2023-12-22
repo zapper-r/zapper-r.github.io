@@ -1,0 +1,144 @@
+{
+  "settings": {
+    "name": "zapper",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2.5,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.2,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.0",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/zapper_1.png",
+    "imageResize": true,
+    "usedWebp": true,
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://zapper-r.github.io/sitemap.xml\n\n",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://zapper-r.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "aojue7sebo",
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.0"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Zapper™ | Home Official Site",
+        "meta_descr": "Zapper - Your Home to Web3. Your home to web3. Explore wallets, NFTs, DeFi, Daos and more...",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image4\" group=\"Images & Videos\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://zapper.hpage.com/\"><img src=\"@PROJECT_PATH@/assets/images/zapper.png\" alt=\"Zapper\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "tZa3VJnBPr",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "2.25rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Zapper™ | Home Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Shipping options</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://zapper-r.github.io/\" class=\"text-primary\">Zapper</a>: Empowering DeFi Users with a Comprehensive Dashboard\n<br>\n<br>Introduction:\n<br>\n<br>In the rapidly expanding world of decentralized finance (DeFi), managing multiple wallets, tracking various assets, and monitoring investments across different protocols can be a complex and time-consuming task. However, Zapper has emerged as a powerful tool, providing users with a comprehensive dashboard to simplify and streamline their DeFi experience. In this article, we will explore the features, benefits, and impact of Zapper as a leading DeFi dashboard, and how it empowers users to navigate the decentralized financial landscape with ease.\n<br>\n<br><b>Understanding Zapper:\n</b><br>a. An Overview: <a href=\"https://zapper.xyz/\" class=\"text-primary\">Zapper</a> is a user-friendly DeFi dashboard that aggregates information from various decentralized protocols and presents it in a unified interface. It allows users to manage their assets, track portfolio performance, and execute transactions seamlessly across multiple platforms. Zapper acts as a bridge between users and the decentralized ecosystem, offering a holistic view of their DeFi holdings.\n<br>\n<br>b. Integration with Leading Protocols: Zapper integrates with numerous popular DeFi protocols, including lending platforms, decentralized exchanges, liquidity pools, yield aggregators, and more. By connecting to these protocols, Zapper provides users with real-time updates on their balances, positions, and transaction history, eliminating the need to navigate through multiple platforms individually.\n<br>\n<br>c. Simplified User Experience: Zapper is designed with a user-centric approach, making it accessible to both experienced DeFi enthusiasts and newcomers. The platform's intuitive interface allows users to connect their wallets seamlessly, view their portfolio diversification, track their performance, and execute transactions with just a few clicks. The simplicity of Zapper enhances usability and reduces the learning curve associated with DeFi.\n<br>\n<br>Key Features and Benefits of Zapper:\n<br>a. Portfolio Tracking and Analytics: Zapper offers users a comprehensive overview of their DeFi portfolio. Users can track the total value of their assets, individual token balances, and portfolio performance over time. Additionally, Zapper provides analytics tools, such as historical charts and performance metrics, enabling users to make data-driven decisions and optimize their investment strategies.\n<br>\n<br>b. One-Click Transactions: Zapper simplifies the process of executing transactions across different DeFi protocols. Users can swap tokens, provide liquidity to pools, stake assets, or participate in yield farming—all through a single interface. Zapper automatically routes transactions to the most cost-effective and efficient protocols, saving users time and reducing gas fees.\n<br>\n<br>c. Zap-In and Zap-Out: Zapper introduces a unique feature called \"Zap-In\" and \"Zap-Out.\" Zap-In allows users to invest in multiple DeFi protocols simultaneously by providing liquidity with a single asset. For example, users can enter a liquidity pool by depositing ETH, and Zapper will automatically distribute the funds across various tokens in the pool. Zap-Out allows users to exit multiple liquidity pools at once, converting their share of tokens back to a single asset.\n<br>\n<br>d. Yield Farming and Staking: Zapper simplifies participation in yield farming and staking activities. Users can easily discover and compare different opportunities, view expected returns, and allocate their assets accordingly. Zapper also provides an automated reinvestment feature, where users can automatically reinvest their farming rewards to compound their returns.\n<br>\n<br>Impact and Future of Zapper:\n<br>a. Accessibility and Adoption: Zapper plays a vital role in enhancing the accessibility of DeFi for a broader audience. By providing a user-friendly interface, simplified transactions, and portfolio tracking, Zapper reduces the barriers to entry and encourages more users to participate in decentralized finance. This increased adoption contributes to the growth and maturation of the DeFi ecosystem.\n<br>\n<br>b. Risk Management and Diversification: Zapper empowers users to manage risk and diversify their DeFi holdings effectively. Through portfolio tracking and analytics, users can monitor their exposure to different assets and protocols, identify potential vulnerabilities, and adjust their strategies accordingly. Zapper's comprehensive dashboard acts as a risk management tool, enhancing the overall stability and resilience of users' DeFi investments.\n<br>\n<br>c. Continuous Innovation: Zapper is continuously evolving to meet the evolving needs of the DeFi community. The platform actively seeks partnerships and integrations with new protocols, expanding its capabilities and offering users access to the latest DeFi opportunities. Zapper's commitment to innovation ensures that users can stay ahead of the curve and benefit from the dynamic DeFi landscape.\n<br>\n<br>Conclusion:\n<br>\n<br>Zapper has emerged as a powerful DeFi dashboard, revolutionizing the way users interact with decentralized finance. By consolidating information from multiple protocols, providing portfolio tracking, simplifying transactions, and offering unique features like Zap-In and Zap-Out, Zapper empowers users to navigate the complex DeFi ecosystem effortlessly. As Zapper continues to evolve and innovate, it will play a pivotal role in driving the widespread adoption of decentralized finance, making it more accessible, user-friendly, and inclusive for all participants.</p>\n              </div>\n            </div>\n            \n            \n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "tZa3YvQgDv",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
